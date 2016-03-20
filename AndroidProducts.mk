@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_sparrow.mk
+    $(LOCAL_DIR)/omni_wren.mk
