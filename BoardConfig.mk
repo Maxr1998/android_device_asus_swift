@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/asus/sparrow/BoardConfigVendor.mk
+-include vendor/asus/wren/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -25,16 +25,17 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := sparrow
+TARGET_BOOTLOADER_BOARD_NAME := wren
 
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive,hi=there
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive,hi=there #Confirm?
 
 BOARD_KERNEL_BASE := 0x0008000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/asus/sparrow/kernel
+TARGET_PREBUILT_KERNEL := device/asus/wren/kernel
 
+#Confirm?
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 23068672
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 268435456
@@ -47,10 +48,10 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
-TARGET_RECOVERY_FSTAB := device/asus/sparrow/config/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/asus/wren/config/twrp.fstab
 
-TW_THEME := watch_mdpi
-TW_ROUND_SCREEN := true
+TW_THEME := watch_mdpi #Confirm?
+TW_ROUND_SCREEN := true #Confirm?
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_NO_USB_STORAGE := true
 TW_INCLUDE_JB_CRYPTO := true
