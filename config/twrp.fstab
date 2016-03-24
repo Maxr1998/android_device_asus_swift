@@ -1,7 +1,8 @@
-# mount point	fstype		device
+# Added backup flag for recovery, otherwise it doesn't appear
+# mount point	fstype		device						flags
 
 /system		ext4		/dev/block/platform/msm_sdcc.1/by-name/system 
 /cache		ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
 /data		ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata
 /boot		emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
-/recovery	emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
+/recovery	emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery flags=backup=1
