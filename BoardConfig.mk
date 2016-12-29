@@ -29,9 +29,9 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := swift
 
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive,hi=there
+BOARD_KERNEL_CMDLINE := androidboot.hardware=swift androidboot.console=ttyHSL0 console=ttyHSL0,115200,n8 androidboot.selinux=permissive msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 earlyprintk
 
-BOARD_KERNEL_BASE := 0x0008000
+BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # prebuilt kernel
