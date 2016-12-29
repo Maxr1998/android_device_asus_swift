@@ -3,6 +3,8 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/asus/swift/BoardConfigVendor.mk
 
+DEVICE_PATH := device/asus/swift
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := bcm_java
@@ -33,7 +35,7 @@ BOARD_KERNEL_BASE := 0x0008000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/asus/swift/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
@@ -47,7 +49,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
-TARGET_RECOVERY_FSTAB := device/asus/swift/config/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/config/twrp.fstab
 
 TW_THEME := watch_mdpi
 TW_ROUND_SCREEN := true
