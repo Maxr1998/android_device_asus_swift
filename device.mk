@@ -1,9 +1,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/asus/anthias/anthias-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/asus/wren/overlay
+DEVICE_PACKAGE_OVERLAYS += device/asus/swift/overlay
 
-LOCAL_PATH := device/asus/wren
+LOCAL_PATH := device/asus/swift
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -14,10 +14,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.wren:root/fstab.wren \
+    $(LOCAL_PATH)/fstab.swift:root/fstab.swift \
 
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_wren
-PRODUCT_DEVICE := wren
+PRODUCT_NAME := full_swift
+PRODUCT_DEVICE := swift
